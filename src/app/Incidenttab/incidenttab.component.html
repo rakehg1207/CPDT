@@ -1,0 +1,28 @@
+ <mat-card style="margin: 15px;height:60%"  >
+            <mat-card-content>
+                <table>
+        
+                    <tr >
+        
+                        <td class ="heading">IncidentId</td>
+        
+                        <td class ="heading">Status</td>
+        
+                        <td class ="heading">Severity</td>
+                    </tr>
+        
+                    <tr *ngFor="let item of data">
+        
+                        <td>{{item.IncidentId}}</td>
+        
+                        <td>{{item.Status}}</td>
+                        <td>{{item.Severity}}</td>
+                    </tr>
+                </table>
+        
+            </mat-card-content>
+        </mat-card>
+<div class="containers">
+<button (click)="gotoExport()">Export</button>
+</div>
+<router-outlet></router-outlet>

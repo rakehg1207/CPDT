@@ -1,0 +1,146 @@
+<style>
+        ul#menu li {
+            display:inline;
+            margin: 1em;
+        }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div class="containers">
+            <header class="app-header">
+                <img src="assets/images.jfif" width="40" height="40">
+                <p>Copa Production DashBoard Tools</p>
+                <ul id="menu">
+                    <li class="m-10 p-5">Username</li>
+                    <li class="m-10 p-5">Logout</li>
+                </ul>
+            </header>
+            <div class="cdisplay">
+                <mat-card class="cardcontainer" (click)="gotoIncidenttab()">
+                    <mat-card class="card-icon">
+                        <i style="font-size: 3em!important;color: #fff"class="material-icons">warning</i>
+                    </mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Incidents</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                    </mat-card-content>
+                    <mat-card-footer class="cardfooter">
+                        <table>
+                            <tr class="count">
+                                <td style="font-size: 1em;font-weight: bold;margin-right:5em;">TOTAL</td>
+                                <td style="font-size: 1em;font-weight: bold;margin-left:1em;">TODAY</td>
+                            </tr>
+                            <tr class="count">
+                                <td style="font-size: 2em;font-weight: bold;margin-right:1em;color: red">23</td>
+                                <td style="font-size: 2em;font-weight: bold;margin-left:1em;color: lawngreen">10</td>
+                            </tr>
+                        </table>
+                    </mat-card-footer>
+                </mat-card>
+                <mat-card class="cardcontainer">
+                    <mat-card class="card-icon" style="background-color:green!important">
+                        <i style="font-size: 3em!important;color: #fff"class="material-icons">airplanemode_on</i>
+                    </mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Issuance</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                    </mat-card-content>
+                    <mat-card-footer class="cardfooter">
+                        <table>
+                            <tr class="count">
+                                <td style="font-size: 1em;font-weight: bold;;margin-right:3em">PNR</td>
+                                <td style="font-size: 1em;font-weight: bold;margin-right:1em;">EMD</td>
+                                <td style="font-size: 1em;font-weight: bold;margin-left:1em;">ETKT</td>                        
+                            </tr>
+                            <tr class="count">
+                                <td style="font-size: 2em;font-weight: bold;margin-right:2em;color: red">23</td>
+                                <td style="font-size: 2em;font-weight: bold;margin-right:1em;color: orange">10</td>
+                                <td style="font-size: 2em;font-weight: bold;margin-left:1em;color: lawngreen">10</td>                        
+                            </tr>
+                        </table>
+                    </mat-card-footer>
+                </mat-card>
+                <mat-card class="cardcontainer">
+                     <mat-card class="card-icon" style="background-color:dodgerblue!important">
+                        <i style="font-size: 3em!important;color: #fff"class="material-icons">attach_money</i>
+                    </mat-card>
+                    <mat-card-header>
+                        <mat-card-title>Finance</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                    </mat-card-content>
+                    <mat-card-footer class="cardfooter">
+                        <table>
+                            <tr class="count">
+                                <td style="font-size: 1em;font-weight: bold;;margin-right:3em">Cash</td>
+                                <td style="font-size: 1em;font-weight: bold;margin-right:1em;">Card</td>
+                                <td style="font-size: 1em;font-weight: bold;margin-left:1em;">Misc</td>                        
+                            </tr>
+                            <tr class="count">
+                                <td style="font-size: 2em;font-weight: bold;margin-right:2em;color: red">23</td>
+                                <td style="font-size: 2em;font-weight: bold;margin-right:1em;color: orange">10</td>
+                                <td style="font-size: 2em;font-weight: bold;margin-left:1em;color: lawngreen">10</td>                        
+                            </tr>
+                        </table>
+                    </mat-card-footer>
+                </mat-card>
+        
+            </div>
+             <div class="cdisplay">
+                 <mat-card class="graphcontainer">
+                     <mat-card class="card-graph">
+                        <canvas class="chart" id="canvas">{{chart}}</canvas>
+                    </mat-card>
+                    <mat-card-footer>
+                        <mat-card-title style="margin-left:5%">Severity</mat-card-title>
+                    </mat-card-footer>
+                </mat-card>
+                <mat-card class="graphcontainer">
+                     <mat-card class="card-graph" style="background-color: #33ccff">
+                        <canvas class="chart" id="lines">{{myLineChart}}</canvas>
+                    </mat-card>
+                    <mat-card-footer>
+                        <mat-card-title style="margin-left:5%">Trending</mat-card-title>
+                    </mat-card-footer>
+                </mat-card>
+                <mat-card class="graphcontainer">
+                     <mat-card class="card-graph" style="background-color: #FFCDD2">
+                        <canvas class="chart" id="bar">{{myBarChart}}</canvas>
+                    </mat-card>
+                    <mat-card-footer>
+                        <mat-card-title style="margin-left:5%">Status</mat-card-title>
+                    </mat-card-footer>
+                </mat-card>
+             </div>
+        </div>
+        <router-outlet></router-outlet>
+        <!--<mat-card style="margin: 15px;height:60%"  >
+            <mat-card-content>
+                <table>
+        
+                    <tr>
+        
+                        <td>Eid</td>
+        
+                        <td>Ename</td>
+        
+                        <td>Esal</td>
+                    </tr>
+        
+                    <tr *ngFor="let item of data">
+        
+                        <td>{{item.eid}}</td>
+        
+                        <td>{{item.ename}}</td>
+                        <td>{{item.esal}}</td>
+                    </tr>
+                </table>
+        
+            </mat-card-content>
+        </mat-card>
+        <mat-card style="margin: 15px;height:60%"  class="mat-elevation-z15"  fxFlex fxLayoutAlign="space-between"  fxLayout="column">
+            <div class="buttons">
+                <button (click)="exportAsXLSX()">Export</button>
+            </div>
+        </mat-card>-->

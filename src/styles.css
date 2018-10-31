@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.containers{
+    background-color: #F5F5F5;
+    height:100%
+}
+.cardcontainer{
+    width:23em;
+    height:8em;
+    margin:3em;
+    padding:0em;
+}
+.heading{
+    width:17em;
+    margin:3em;
+    padding:0em;
+    font-weight:bold;
+}
+.chart{
+    height: 15em!important;
+}
+.count{
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.cdisplay{
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.card-icon{
+        border-radius: 3px;
+        background-color: #ff9800;
+        padding: 15px;
+        margin-top: -25px!important;
+        margin-right: 15px;
+        width:3em;
+        height:3em;
+        float: left;
+      }
+.card-graph{
+        border-radius: 3px;
+        background-color: #ccccb3;
+        padding: 15px;
+        margin-top: -25px!important;
+        margin-right: 15px;
+        width:18em;
+        height:15em;
+        float: left;
+}
+.graphcontainer{
+    width:20em;
+    height:19em;
+    margin:3em;
+    padding:0em;
+}
+.app-header {
+    display: flex;
+    height: 55px;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    border-bottom: 1px solid #c8ced3;
+    background-color: #fff;
+    justify-content:space-between;
+}
+.cardfooter{
+    border-top: 1px solid #c8ced3;
+    margin-top:12% !important;
+    margin-left: 5%!important;
+    margin-right:5%!important;
+    margin-bottom:10%!important;
+    
+    
+}
+/*.navgbar{
+    /*position: relative;*/
+    /*display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;*/
+    /*padding: .5rem 1rem;*/
+/*}*/
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+.navbar-nav {
+    /*display: -ms-flexbox;*/
+    display: flex;
+    /*-ms-flex-direction: column;
+    flex-direction: column;*/
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav {
+    /*display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;*/
+    flex-wrap: wrap;
+    /*padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;*/
+}
+.m-10{
+    margin: 1%;
+}
+.p-5{
+padding: 5;
+}
